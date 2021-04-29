@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "./components/Layout/Layout";
+import { Layout } from "./features/Layout/Layout";
 import { AppRouting } from "./routes/AppRouting";
 import { CustomMuiTheme } from "./theme/CustomMuiTheme";
 
