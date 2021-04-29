@@ -1,10 +1,14 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import { INames } from "../../common/types/app";
 import { Atom } from "../atoms";
 
-interface Props {
-  names: string[];
+interface Optionals {
+  title?: string;
 }
+
+type Props = INames & Optionals;
+
 export function Molecule(props: Props) {
   return (
     <>
