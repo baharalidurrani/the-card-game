@@ -1,11 +1,16 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 
 export function Home() {
   return (
-    <div>
-      <h1>Hi there!</h1>
-      <h3>Coming Soon!</h3>
-      <h6>I&apos;m serious...</h6>
-    </div>
+    <Container>
+      <Typography variant="h1" align="center">
+        Hi there!
+      </Typography>
+      <Typography variant="h2" align="center">
+        Coming soon...
+      </Typography>
+    </Container>
   );
 }

@@ -25,6 +25,10 @@ export function Counter() {
 
   return (
     <Container>
+      <Typography variant="h1" align="center">
+        Counter
+      </Typography>
+
       <Box m={10}>
         <Grid container direction="row" justify="space-evenly" alignItems="center">
           <Grid item>

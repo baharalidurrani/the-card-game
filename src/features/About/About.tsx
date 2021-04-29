@@ -1,9 +1,10 @@
 import React from "react";
+import Typography from "@material-ui/core/Typography";
 
 export function About() {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Typography variant="h1" align="center">
+      About
+    </Typography>
   );
 }
