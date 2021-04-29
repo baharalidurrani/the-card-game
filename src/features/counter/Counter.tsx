@@ -6,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import AddCircleOutlineOutlinedIcon from "@material-ui/icons/AddCircleOutlineOutlined";
 import RemoveCircleOutlineOutlinedIcon from "@material-ui/icons/RemoveCircleOutlineOutlined";
-import { useAppSelector, useAppDispatch } from "../../app-redux/hooks";
 import {
   decrement,
   increment,
@@ -14,7 +13,8 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from "./counterSlice";
+} from "../../app-redux/counter/counterSlice";
+import { useAppSelector, useAppDispatch } from "../../app-redux/hooks";
 
 export function Counter() {
   const count = useAppSelector(selectCount);
