@@ -40,12 +40,12 @@ module.exports = {
     "prefer-template": "error",
     // 'import/no-cycle': 'error',
     "@typescript-eslint/no-non-null-assertion": "off",
-    "no-console": [
-      "warn",
-      {
-        allow: ["warn", "error", "info"],
-      },
-    ],
+    // "no-console": [
+    //   "warn",
+    //   {
+    //     allow: ["warn", "error", "info"],
+    //   },
+    // ],
     "prefer-destructuring": [
       "error",
       {
@@ -67,6 +67,7 @@ module.exports = {
     ],
 
     // T Y P E S C R I P T
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/ban-types": [
       "error",
       {
