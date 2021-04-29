@@ -67,6 +67,7 @@ module.exports = {
     ],
 
     // T Y P E S C R I P T
+    "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/ban-types": [
       "error",
