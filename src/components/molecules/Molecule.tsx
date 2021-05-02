@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { INames } from "../../common/types/app";
+import { INames } from "../../common/@types/app";
 import { Atom } from "../atoms";
 
 interface Optionals {
