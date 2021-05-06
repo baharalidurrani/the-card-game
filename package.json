@@ -1,5 +1,5 @@
 {
-  "name": "natjan-ui",
+  "name": "the-card-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,12 +27,9 @@
     "start": "react-scripts start",
     "starts": "HTTPS=true SSL_CRT_FILE=~/localhost+1.pem SSL_KEY_FILE=~/localhost+1-key.pem react-scripts start",
     "startwin": "set HTTPS=true&&set SSL_CRT_FILE=cert/localhost+1.pem&&set SSL_KEY_FILE=cert/localhost+1-key.pem&&react-scripts start",
-    "pretty": "prettier --write \"**/*.+(ts|tsx|css|md)\"",
+    "pretty": "prettier --write \"**/*.+(ts|tsx|css|md|html)\"",
     "lint": "eslint --fix src/**/*.ts src/**/*.tsx",
     "build": "react-scripts build",
-    "s3": "npm run deploy && npm run url",
-    "deploy": "aws s3 sync build/ s3://ids-web --acl public-read",
-    "url": "echo Deployed 🚀 http://ids-web.s3-website-us-east-1.amazonaws.com",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

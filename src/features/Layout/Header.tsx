@@ -59,7 +59,7 @@ export function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap className={classes.title}>
-            National Janitorial Solutions
+            The Card Game
           </Typography>
           <IconButton color="inherit" onClick={toggleTheme}>
             {isDarkTheme ? <BrightnessHighIcon /> : <Brightness4Icon />}

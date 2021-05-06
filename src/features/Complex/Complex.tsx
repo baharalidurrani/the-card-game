@@ -1,17 +1,15 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import { Molecule } from "../../components/molecules";
+import { Organism } from "../../components/organisms";
 
-const names = ["Newton", "Einstein", "Nicola"];
-
-export function Organism() {
+export function Complex() {
   return (
     <Container>
       <Typography variant="h1" align="center">
-        Organism
+        Complex
       </Typography>
-      <Molecule names={names} />
+      <Organism />
     </Container>
   );
 }

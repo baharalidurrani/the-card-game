@@ -6,10 +6,7 @@ export function Home() {
   return (
     <Container>
       <Typography variant="h1" align="center">
-        Hi there!
-      </Typography>
-      <Typography variant="h2" align="center">
-        Coming soon...
+        Lets start the game!
       </Typography>
     </Container>
   );
