@@ -9,8 +9,8 @@ export function About() {
         Hi there!
       </Typography>
       <Typography variant="h6" align="center">
-        Welcome to the most Efficient, Elegant and Easy to Excel production React template of 2021
-        that you can <del>ever</del> never find over the web.
+        Welcome to the most Efficient, Elegant and Easy to Excel production ready React template of
+        2021 that one can <del>ever</del> never find on the web.
       </Typography>
     </Container>
   );
