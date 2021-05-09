@@ -25,6 +25,11 @@ export const getAllCards = (state: GameState, action: PayloadAction<ICard[]>) =>
 };
 
 export const allCardsAsync = createAsyncThunk("game/getAllCards", async () => {
+  await new Promise<void>((res) =>
+    setTimeout(() => {
+      res();
+    }, 1000)
+  );
   const response = await ax.get("/cards");
   return response.data;
 });
@@ -34,6 +39,11 @@ export const postNewCard = (state: GameState, action: PayloadAction<ICard>) => {
 };
 
 export const postCardAsync = createAsyncThunk("game/postNewCard", async (body: ICard) => {
-  const response = await ax.post("/cards", body);
+  await new Promise<void>((res) =>
+    setTimeout(() => {
+      res();
+    }, 1000)
+  );
+  const response = await ax.post("/submitted", body);
   return response.data;
 });

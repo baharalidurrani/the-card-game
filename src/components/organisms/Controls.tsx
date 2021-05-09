@@ -1,6 +1,5 @@
 import React from "react";
-import { Box } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
+import { Box, Button, CircularProgress } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -13,6 +12,8 @@ import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 interface Props {
   sortByName: (asc: boolean) => void;
+  status: "idle" | "loading" | "failed";
+  postNew: () => void;
 }
 export function Controls(props: Props) {
   return (
@@ -57,8 +58,17 @@ export function Controls(props: Props) {
           </Grid>
           <Grid item>
             <Box m={2}>
-              <Button variant="contained" color="secondary">
-                Mock Submit
+              <Button
+                variant="contained"
+                color="secondary"
+                disabled={props.status === "loading"}
+                onClick={props.postNew}
+              >
+                {props.status === "loading" ? (
+                  <CircularProgress color="secondary" />
+                ) : (
+                  "Mock Submit"
+                )}
               </Button>
             </Box>
           </Grid>

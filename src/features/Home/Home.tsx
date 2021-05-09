@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
-import { allCardsAsync } from "../../app-redux/game/actions/gameActions";
+import { allCardsAsync, postCardAsync } from "../../app-redux/game/actions/gameActions";
 import {
   selectCardAction,
   selectCards,
   selectSelectedCard,
+  selectStatus,
   sortAscAction,
   sortDecAction,
 } from "../../app-redux/game/gameSlice";
@@ -20,6 +21,11 @@ export function Home() {
     dispatch(allCardsAsync());
   }, [dispatch]);
   const selected = useAppSelector(selectSelectedCard);
+  const status = useAppSelector(selectStatus);
+  const postNew = () => {
+    selected && dispatch(postCardAsync(selected));
+  };
+
   const sortByName = (asc: boolean) =>
     asc ? dispatch(sortAscAction()) : dispatch(sortDecAction());
 
@@ -42,7 +48,7 @@ export function Home() {
         />
       </Grid>
       <Grid item xs={12} md={3}>
-        <Controls sortByName={sortByName} />
+        <Controls sortByName={sortByName} status={status} postNew={postNew} />
       </Grid>
     </Grid>
   );
