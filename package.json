@@ -26,10 +26,10 @@
   "scripts": {
     "start": "react-scripts start",
     "starts": "HTTPS=true SSL_CRT_FILE=~/localhost+1.pem SSL_KEY_FILE=~/localhost+1-key.pem react-scripts start",
-    "startwin": "set HTTPS=true&&set SSL_CRT_FILE=cert/localhost+1.pem&&set SSL_KEY_FILE=cert/localhost+1-key.pem&&react-scripts start",
     "pretty": "prettier --write \"**/*.+(ts|tsx|css|md|html)\"",
     "lint": "eslint --fix src/**/*.ts src/**/*.tsx",
     "build": "react-scripts build",
+    "api": "json-server --watch server/db.json --port 8000",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -57,6 +57,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
+    "json-server": "^0.16.3",
     "prettier": "^2.2.1"
   }
 }
