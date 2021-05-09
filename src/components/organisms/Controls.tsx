@@ -1,4 +1,6 @@
 import React from "react";
+import { Box } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -18,21 +20,34 @@ export function Controls() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Grid container direction="row" justify="space-evenly" alignItems="center">
+        <Grid container direction="column" justify="space-between" alignItems="center">
           <Grid item>
-            <Tooltip title="Ascending">
-              <IconButton aria-label="sort ascending">
-                <ArrowDownwardIcon />
-              </IconButton>
-            </Tooltip>
+            <Grid container direction="row" justify="space-between" alignItems="center">
+              <Grid item>
+                <Tooltip title="Ascending">
+                  <IconButton aria-label="sort ascending">
+                    <ArrowDownwardIcon />
+                  </IconButton>
+                </Tooltip>
+              </Grid>
+              <Grid item>
+                <Typography variant="subtitle2">Sort Order</Typography>
+              </Grid>
+              <Grid item>
+                <Tooltip title="Descending">
+                  <IconButton aria-label="sort descending">
+                    <ArrowUpwardIcon />
+                  </IconButton>
+                </Tooltip>
+              </Grid>
+            </Grid>
           </Grid>
-          <Typography variant="subtitle2">Sort Order</Typography>
           <Grid item>
-            <Tooltip title="Descending">
-              <IconButton aria-label="sort descending">
-                <ArrowUpwardIcon />
-              </IconButton>
-            </Tooltip>
+            <Box m={2}>
+              <Button variant="contained" color="secondary">
+                Mock Submit
+              </Button>
+            </Box>
           </Grid>
         </Grid>
       </CardActions>
