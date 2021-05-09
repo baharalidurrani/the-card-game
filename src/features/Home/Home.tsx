@@ -42,8 +42,9 @@ export function Home() {
               </Box>
             </Grow>
           )}
-
-          <Typography variant="h4">Overview</Typography>
+          <Box m={2}>
+            <Typography variant="h4">Overview</Typography>
+          </Box>
           <CardList
             cards={cards}
             selected={selected}
