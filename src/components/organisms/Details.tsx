@@ -7,12 +7,19 @@ import { ICard } from "../../common/@types/app";
 interface Props {
   data: ICard;
   wrapText?: boolean;
+  selected?: ICard;
+  changeSelect?: (data: ICard) => void;
 }
-export function Details({ wrapText, data }: Props) {
+export function Details({ wrapText, data, selected, changeSelect }: Props) {
   return (
-    <Card>
+    <Card
+      raised={Boolean(selected?.id === data.id)}
+      onClick={() => {
+        changeSelect && changeSelect(data);
+      }}
+    >
       <CardContent>
-        <Typography variant="h4">Details</Typography>
+        {!wrapText && <Typography variant="h4">Details</Typography>}
         <br />
         <Typography noWrap={wrapText}>{data.realName}</Typography>
         <br />

@@ -3,9 +3,10 @@ import { ICard } from "../../../common/@types/app";
 import { ax } from "../../../common/api/apiClient";
 import { GameState } from "../gameSlice";
 
-/**
- * Don't use directly, instead use `openDrawerAction` from the corresponding slice/reduce file
- */
+export const selectCard = (state: GameState, action: PayloadAction<ICard>) => {
+  state.selected = action.payload;
+};
+
 export const getAllCards = (state: GameState, action: PayloadAction<ICard[]>) => {
   state.status = "idle";
   state.cards = action.payload;

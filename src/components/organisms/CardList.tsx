@@ -6,6 +6,8 @@ import { ICard } from "../../common/@types/app";
 
 interface Props {
   cards: ICard[];
+  selected?: ICard;
+  changeSelect?: (data: ICard) => void;
 }
 export function CardList(props: Props) {
   return (
@@ -14,7 +16,12 @@ export function CardList(props: Props) {
       <Grid container direction="row" justify="space-between" spacing={1}>
         {props.cards.map((c, i) => (
           <Grid item xs={12} key={i} md={4}>
-            <Details wrapText data={c} />
+            <Details
+              wrapText
+              data={c}
+              selected={props.selected}
+              changeSelect={props.changeSelect}
+            />
           </Grid>
         ))}
       </Grid>
