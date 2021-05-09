@@ -9,7 +9,7 @@ import {
 } from "../../app-redux/settings/settingsSlice";
 import { DrawerContent } from "./DrawerContent";
 
-export const DRAWER_WIDTH = 240;
+export const DRAWER_WIDTH = 200;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     drawer: {

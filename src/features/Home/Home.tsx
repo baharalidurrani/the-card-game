@@ -1,13 +1,19 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import { CardList, Controls, Details } from "../../components/organisms";
 
 export function Home() {
   return (
-    <Container>
-      <Typography variant="h1" align="center">
-        Lets start the game!
-      </Typography>
-    </Container>
+    <Grid container direction="row" justify="space-evenly" spacing={1}>
+      <Grid item xs={12} md={9}>
+        <Details />
+        <br />
+
+        <CardList />
+      </Grid>
+      <Grid item xs={12} md={3}>
+        <Controls />
+      </Grid>
+    </Grid>
   );
 }
