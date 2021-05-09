@@ -3,6 +3,18 @@ import { ICard } from "../../../common/@types/app";
 import { ax } from "../../../common/api/apiClient";
 import { GameState } from "../gameSlice";
 
+export const sortAsc = (state: GameState) => {
+  state.cards = state.cards.sort((a, b) => {
+    return b.realName < a.realName ? 1 : b.realName > a.realName ? -1 : 0;
+  });
+};
+
+export const sortDec = (state: GameState) => {
+  state.cards = state.cards.sort((a, b) => {
+    return b.realName > a.realName ? 1 : b.realName < a.realName ? -1 : 0;
+  });
+};
+
 export const selectCard = (state: GameState, action: PayloadAction<ICard>) => {
   state.selected = action.payload;
 };

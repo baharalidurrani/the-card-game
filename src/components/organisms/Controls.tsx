@@ -11,7 +11,10 @@ import Typography from "@material-ui/core/Typography";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
-export function Controls() {
+interface Props {
+  sortByName: (asc: boolean) => void;
+}
+export function Controls(props: Props) {
   return (
     <Card>
       <CardContent>
@@ -25,7 +28,12 @@ export function Controls() {
             <Grid container direction="row" justify="space-between" alignItems="center">
               <Grid item>
                 <Tooltip title="Ascending">
-                  <IconButton aria-label="sort ascending">
+                  <IconButton
+                    aria-label="sort ascending"
+                    onClick={() => {
+                      props.sortByName(true);
+                    }}
+                  >
                     <ArrowDownwardIcon />
                   </IconButton>
                 </Tooltip>
@@ -35,7 +43,12 @@ export function Controls() {
               </Grid>
               <Grid item>
                 <Tooltip title="Descending">
-                  <IconButton aria-label="sort descending">
+                  <IconButton
+                    aria-label="sort descending"
+                    onClick={() => {
+                      props.sortByName(false);
+                    }}
+                  >
                     <ArrowUpwardIcon />
                   </IconButton>
                 </Tooltip>
