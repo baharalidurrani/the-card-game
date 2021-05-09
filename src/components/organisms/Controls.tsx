@@ -57,7 +57,7 @@ export function Controls(props: Props) {
             </Grid>
           </Grid>
           <Grid item>
-            <Box m={2}>
+            <Box m={3}>
               <Button
                 variant="contained"
                 color="secondary"
